@@ -1,6 +1,6 @@
 NAME = fixedUseful
 
-SRC = main.cpp Claptrap.cpp
+SRC = main.cpp ClapTrap.cpp
 OBJ = $(SRC:.cpp=.o)
 HEADER = Claptrap.hpp
 
