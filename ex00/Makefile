@@ -2,7 +2,7 @@ NAME = claptrap
 
 SRC = main.cpp ClapTrap.cpp
 OBJ = $(SRC:.cpp=.o)
-HEADER = Claptrap.hpp
+HEADER = ClapTrap.hpp
 
 CC = c++
 RM = rm -f

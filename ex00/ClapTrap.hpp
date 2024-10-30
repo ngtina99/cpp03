@@ -31,16 +31,6 @@ class ClapTrap
 		void takeDamage(unsigned int amount);
 		void beRepaired(unsigned int amount);
 
-		/* Getters & Setters */
-		std::string const	&getName( ) const;
-		int const			&getHitPoints( ) const;
-		int const			&getEnergyPoints( ) const;
-		int const			&getAttackDamage( ) const;
-		void				setName(std::string const &name);
-		void				setHitPoints(int const &value);
-		void				setEnergyPoints(int const &value);
-		void				setAttackDamage(int const &value);
-
 	private:
 
 		std::string	_name;
