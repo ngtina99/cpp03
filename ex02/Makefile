@@ -1,8 +1,8 @@
-NAME = fixedUseful
+NAME = fragtrap
 
-SRC = main.cpp Claptrap.cpp ScavTrap.cpp FragTrap.cpp
+SRC = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
 OBJ = $(SRC:.cpp=.o)
-HEADER = Claptrap.hpp ScavTrap.hpp FragTrap.hpp
+HEADER = ClapTrap.hpp ScavTrap.hpp FragTrap.hpp
 
 CC = c++
 RM = rm -f

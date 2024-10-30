@@ -1,8 +1,8 @@
-NAME = fixedUseful
+NAME = diamondtrap
 
-SRC = main.cpp Claptrap.cpp ScavTrap.cpp FragTrap.cpp DiamondTrap.cpp
+SRC = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp DiamondTrap.cpp
 OBJ = $(SRC:.cpp=.o)
-HEADER = Claptrap.hpp ScavTrap.hpp FragTrap.hpp DiamondTrap.hpp
+HEADER = ClapTrap.hpp ScavTrap.hpp FragTrap.hpp DiamondTrap.hpp
 
 CC = c++
 RM = rm -f

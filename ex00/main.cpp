@@ -22,9 +22,9 @@ int	main()
 	Joao.attack("Pedro");
 	Pedro.takeDamage(0);
 	Pedro.takeDamage(42);
-	Pedro.attack("Me");
+	Pedro.attack("Miguel");
 	Pedro.beRepaired(2);
 	Pedro.takeDamage(10);
 	Miguel.attack("Joao");
-	return 0;
+	return (0);
 }
