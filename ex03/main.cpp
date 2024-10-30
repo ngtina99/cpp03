@@ -5,12 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ngtina1999 <ngtina1999@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/30 16:55:20 by ngtina1999        #+#    #+#             */
-/*   Updated: 2024/10/30 19:04:08 by ngtina1999       ###   ########.fr       */
+/*   Created: 2024/10/30 19:15:11 by ngtina1999        #+#    #+#             */
+/*   Updated: 2024/10/30 19:17:27 by ngtina1999       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#include "DiamondTrap.hpp"
 
 int main()
 {
@@ -22,7 +22,7 @@ int main()
 	Joao.attack("Pedro");
 	Pedro.takeDamage(0);
 	Pedro.takeDamage(42);
-	Pedro.attack("Miguel");
+	Pedro.attack("Me");
 	Pedro.beRepaired(2);
 	Pedro.takeDamage(10);
 	Miguel.attack("Joao");
@@ -41,5 +41,32 @@ int main()
 	scavPedro.beRepaired(2);
 	scavPedro.takeDamage(10);
 	scavMiguel.attack("scavJoao");
+
+	FragTrap fragJoao("fragJoao");
+	FragTrap fragPedro("fragPedro");
+	FragTrap fragMiguel;
+	fragMiguel = fragPedro;
+
+	fragJoao.attack("fragPedro");
+	fragPedro.takeDamage(0);
+	fragPedro.takeDamage(42);
+	fragPedro.attack("fragMiguel");
+	fragPedro.highFivesGuys();
+	fragJoao.highFivesGuys();
+	fragPedro.beRepaired(2);
+	fragPedro.takeDamage(10);
+	fragMiguel.attack("fragJoao");
+
+
+//write to Diamond
+	fragJoao.attack("fragPedro");
+	fragPedro.takeDamage(0);
+	fragPedro.takeDamage(42);
+	fragPedro.attack("fragMiguel");
+	fragPedro.highFivesGuys();
+	fragJoao.highFivesGuys();
+	fragPedro.beRepaired(2);
+	fragPedro.takeDamage(10);
+	fragMiguel.attack("fragJoao");
 	return (0);
 }
