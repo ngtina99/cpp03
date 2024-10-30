@@ -34,7 +34,7 @@ void	bob_rundown(void)
 {
 	ClapTrap	bob("Bob");
 
-	while (bob.get_hp())
+	while (bob.getHitPoints())
 	{
 		bob.takeDamage(2);
 		bob.beRepaired(2);
