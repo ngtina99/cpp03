@@ -21,7 +21,16 @@ int	main()
 
 	Joao.attack("Pedro");
 	Pedro.takeDamage(0);
-	Pedro.takeDamage(42);
+	Pedro.takeDamage(1);
+	Pedro.attack("Miguel");
+	Pedro.attack("Miguel");
+	Pedro.attack("Miguel");
+	Pedro.attack("Miguel");
+	Pedro.attack("Miguel");
+	Pedro.attack("Miguel");
+	Pedro.attack("Miguel");
+	Pedro.attack("Miguel");
+	Pedro.attack("Miguel");
 	Pedro.attack("Miguel");
 	Pedro.beRepaired(2);
 	Pedro.takeDamage(10);

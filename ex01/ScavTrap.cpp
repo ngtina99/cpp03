@@ -18,7 +18,7 @@ ScavTrap::ScavTrap(std::string const &name): ClapTrap(name) {
 
 
 //what is there is no name?
-ScavTrap::ScavTrap() {
+ScavTrap::ScavTrap() :ClapTrap(){
 	std::cout << "ScavTrap default constructor called with " << this->_name << std::endl;
 }
 
