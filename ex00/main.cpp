@@ -14,6 +14,13 @@
 
 int	main()
 {
+
+	std::cout 
+	<< "\n==============================\n"
+	<< "      ClapTrap Tests         \n"
+	<< "==============================\n" 
+	<< std::endl;
+
 	ClapTrap Joao("Joao");
 	ClapTrap Pedro("Pedro");
 

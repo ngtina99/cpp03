@@ -6,7 +6,7 @@
 /*   By: ngtina1999 <ngtina1999@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 18:28:55 by ngtina1999        #+#    #+#             */
-/*   Updated: 2024/12/02 00:54:25 by ngtina1999       ###   ########.fr       */
+/*   Updated: 2024/12/02 05:31:16 by ngtina1999       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,17 @@
 
 FragTrap::FragTrap(std::string const &name): ClapTrap(name) {
 	std::cout << "FragTrap constructor called with " << this->_name << std::endl;
+	this->_hitPoints = 100;
+	this->_energyPoints = 100;
+	this->_attackDamage = 30;
+	
 }
 
-//what is there is no name?
 FragTrap::FragTrap() {
 	std::cout << "FragTrap default constructor called with " << this->_name << std::endl;
+	this->_hitPoints = 100;
+	this->_energyPoints = 100;
+	this->_attackDamage = 30;
 }
 
 FragTrap::~FragTrap() {
@@ -31,13 +37,15 @@ FragTrap::FragTrap(FragTrap const &src) : ClapTrap(src) {
 
 FragTrap &FragTrap::operator=(const FragTrap &rhs) {
 	std::cout << "FragTrap copy assignment operator called with " << this->_name << std::endl;
-	ClapTrap::operator=(rhs);
-	return (*this);
+	if (this != &rhs) {
+		this->_name = rhs._name;
+		this->_hitPoints = rhs._hitPoints;
+		this->_energyPoints = rhs._energyPoints;
+		this->_attackDamage = rhs._attackDamage;
+	}
+	return *this;
 }
 
 void	FragTrap::highFivesGuys() {
-	if (this->_hitPoints <= 0)
-		std::cout << "No high five: ClapTrap " << this->_name << " is dead." << std::endl;
-	else
-		std::cout << "FragTrap " << this->_name << "requests a high five!";
+		std::cout << "FragTrap " << this->_name << " throws up a hand and scores a legendary high five!" << std::endl;
 }

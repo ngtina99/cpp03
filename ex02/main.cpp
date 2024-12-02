@@ -6,7 +6,7 @@
 /*   By: ngtina1999 <ngtina1999@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 18:58:32 by ngtina1999        #+#    #+#             */
-/*   Updated: 2024/10/30 19:05:01 by ngtina1999       ###   ########.fr       */
+/*   Updated: 2024/12/02 05:38:55 by ngtina1999       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,47 +14,62 @@
 
 int main()
 {
+
+	std::cout 
+	<< "\n==============================\n"
+	<< "      ClapTrap Tests         \n"
+	<< "==============================\n" 
+	<< std::endl;
+
 	ClapTrap Joao("Joao");
 	ClapTrap Pedro("Pedro");
-	ClapTrap Miguel;
-	Miguel = Pedro;
 
-	Joao.attack("Pedro");
-	Pedro.takeDamage(0);
-	Pedro.takeDamage(42);
-	Pedro.attack("Me");
-	Pedro.beRepaired(2);
-	Pedro.takeDamage(10);
-	Miguel.attack("Joao");
+	for (int count = 0; count < 9; count++) {
+		Joao.attack("Miguel");
+	}
+	Pedro.takeDamage(3);
+	Pedro.beRepaired(1);
+	Pedro.takeDamage(2);
+	Joao.checkStatus();
+	Pedro.checkStatus();
 	
-	ScavTrap scavJoao("scavJoao");
-	ScavTrap scavPedro("scavPedro");
-	ScavTrap scavMiguel;
-	scavMiguel = scavPedro;
+	std::cout 
+	<< "\n==============================\n"
+	<< "      ScavTrap Tests         \n"
+	<< "==============================\n" 
+	<< std::endl;
 
-	scavJoao.attack("scavPedro");
-	scavPedro.takeDamage(0);
-	scavPedro.takeDamage(42);
-	scavPedro.attack("scavMiguel");
-	scavJoao.guardGate();
-	scavPedro.guardGate();
-	scavPedro.beRepaired(2);
-	scavPedro.takeDamage(10);
-	scavMiguel.attack("scavJoao");
+	ScavTrap ScavJoao("ScavJoao");
+	ScavTrap ScavPedro("ScavPedro");
 
-	FragTrap fragJoao("fragJoao");
-	FragTrap fragPedro("fragPedro");
-	FragTrap fragMiguel;
-	fragMiguel = fragPedro;
+	for (int count = 0; count < 9; count++) {
+		ScavJoao.attack("ScavMiguel");
+	}
+	ScavPedro.takeDamage(3);
+	ScavPedro.beRepaired(1);
+	ScavPedro.takeDamage(2);
+	ScavPedro.guardGate();
+	ScavJoao.checkStatus();
+	ScavPedro.checkStatus();
 
-	fragJoao.attack("fragPedro");
-	fragPedro.takeDamage(0);
-	fragPedro.takeDamage(42);
-	fragPedro.attack("fragMiguel");
-	fragPedro.highFivesGuys();
-	fragJoao.highFivesGuys();
-	fragPedro.beRepaired(2);
-	fragPedro.takeDamage(10);
-	fragMiguel.attack("fragJoao");
+
+	std::cout 
+	<< "\n==============================\n"
+	<< "      FragTrap Tests         \n"
+	<< "==============================\n" 
+	<< std::endl;
+
+	FragTrap FragJoao("FragJoao");
+	FragTrap FragPedro("FragPedro");
+
+	for (int count = 0; count < 9; count++) {
+		FragJoao.attack("FragMiguel");
+	}
+	FragPedro.takeDamage(3);
+	FragPedro.beRepaired(1);
+	FragPedro.takeDamage(2);
+	FragPedro.highFivesGuys();
+	FragJoao.checkStatus();
+	FragPedro.checkStatus();
 	return (0);
 }
