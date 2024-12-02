@@ -6,7 +6,7 @@
 /*   By: ngtina1999 <ngtina1999@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 16:55:20 by ngtina1999        #+#    #+#             */
-/*   Updated: 2024/10/30 19:04:08 by ngtina1999       ###   ########.fr       */
+/*   Updated: 2024/12/02 05:00:00 by ngtina1999       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,30 +16,26 @@ int main()
 {
 	ClapTrap Joao("Joao");
 	ClapTrap Pedro("Pedro");
-	ClapTrap Miguel;
-	Miguel = Pedro;
 
-	Joao.attack("Pedro");
-	Pedro.takeDamage(0);
-	Pedro.takeDamage(42);
-	Pedro.attack("Miguel");
-	Pedro.beRepaired(2);
-	Pedro.takeDamage(10);
-	Miguel.attack("Joao");
+	for (int count = 0; count < 9; count++) {
+		Joao.attack("Miguel");
+	}
+	Pedro.takeDamage(3);
+	Pedro.beRepaired(1);
+	Pedro.takeDamage(2);
+	Joao.checkStatus();
+	Pedro.checkStatus();
 	
-	ScavTrap scavJoao("scavJoao");
-	ScavTrap scavPedro("scavPedro");
-	ScavTrap scavMiguel;
-	scavMiguel = scavPedro;
+	ScavTrap ScavJoao("ScavJoao");
+	ScavTrap ScavPedro("ScavPedro");
 
-	scavJoao.attack("scavPedro");
-	scavPedro.takeDamage(0);
-	scavPedro.takeDamage(42);
-	scavPedro.attack("scavMiguel");
-	scavJoao.guardGate();
-	scavPedro.guardGate();
-	scavPedro.beRepaired(2);
-	scavPedro.takeDamage(10);
-	scavMiguel.attack("scavJoao");
+	for (int count = 0; count < 9; count++) {
+		ScavJoao.attack("Miguel");
+	}
+	ScavPedro.takeDamage(3);
+	ScavPedro.beRepaired(1);
+	ScavPedro.takeDamage(2);
+	ScavJoao.checkStatus();
+	ScavPedro.checkStatus();
 	return (0);
 }
