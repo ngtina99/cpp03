@@ -6,7 +6,7 @@
 /*   By: ngtina1999 <ngtina1999@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 19:15:11 by ngtina1999        #+#    #+#             */
-/*   Updated: 2024/12/02 05:44:48 by ngtina1999       ###   ########.fr       */
+/*   Updated: 2024/12/02 06:28:21 by ngtina1999       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,7 @@ int main()
 	DiamondPedro.takeDamage(3);
 	DiamondPedro.beRepaired(1);
 	DiamondPedro.takeDamage(2);
-	****
+	DiamondPedro.whoAmI();
 	DiamondJoao.checkStatus();
 	DiamondPedro.checkStatus();
 	
