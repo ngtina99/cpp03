@@ -3,7 +3,8 @@
 
 #include "FragTrap.hpp"
 
-class DiamonTrap :  public ScavTrap, public FragTrap {
+class DiamondTrap :  public ScavTrap, public FragTrap {
+
 	public:
 		DiamondTrap();
 		FragTrap(std::string const &name);

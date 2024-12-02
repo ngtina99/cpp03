@@ -6,7 +6,7 @@
 /*   By: ngtina1999 <ngtina1999@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 18:29:56 by ngtina1999        #+#    #+#             */
-/*   Updated: 2024/10/30 19:12:46 by ngtina1999       ###   ########.fr       */
+/*   Updated: 2024/12/02 05:41:59 by ngtina1999       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include "ScavTrap.hpp"
 
 class FragTrap : virtual public ClapTrap {
+
 	public:
 		FragTrap();
 		FragTrap(std::string const &name);
@@ -24,6 +25,7 @@ class FragTrap : virtual public ClapTrap {
 		FragTrap &operator=(FragTrap const &rhs);
 
 		void highFivesGuys(void);
+
 };
 
 #endif

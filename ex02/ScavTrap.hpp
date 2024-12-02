@@ -16,6 +16,7 @@
 #include "ClapTrap.hpp"
 
 class ScavTrap: public ClapTrap {
+	
 	public:
 		ScavTrap();
 		ScavTrap(std::string const &name);
@@ -25,6 +26,7 @@ class ScavTrap: public ClapTrap {
 
 		void attack(const std::string &target);
 		void guardGate();
+
 };
 
 #endif
