@@ -13,7 +13,7 @@
 #include "ScavTrap.hpp"
 
 ScavTrap::ScavTrap(std::string const &name): ClapTrap(name) {
-	std::cout << "ScavTrap default constructor called with " << this->_name << std::endl;
+	std::cout << "ScavTrap constructor called with " << this->_name << std::endl;
 }
 
 

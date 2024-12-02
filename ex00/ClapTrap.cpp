@@ -10,16 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-// Conditional Check in attack: Currently, after decrementing this->_energyPoints in attack, you still check this->_energyPoints directly after. It would be clearer to add a single else statement after the attack to display the energy and health conditions separately.
-
-// Preventing Negative _hitPoints in takeDamage: Since _hitPoints is unsigned, it may not go negative, but checking if (this->_hitPoints < amount) before the subtraction could prevent overflow issues.
-
-// Consistency in Constructor Messages: In the default constructor, "ClapTrap constructor called with" could be adjusted to "ClapTrap default constructor called with" to match the other constructors.
-
 #include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap(std::string const &inputName) : _name(inputName), _hitPoints(10), _energyPoints(10), _attackDamage(0) {
-	std::cout << "ClapTrap default constructor called with " << this->_name << std::endl;
+	std::cout << "ClapTrap  constructor called with " << this->_name << std::endl;
 }
 
 ClapTrap::ClapTrap() : _name("Default"), _hitPoints(10), _energyPoints(10), _attackDamage(0) {

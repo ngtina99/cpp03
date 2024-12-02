@@ -13,7 +13,7 @@
 #include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap(std::string const &inputName) : _name(inputName), _hitPoints(100), _energyPoints(50), _attackDamage(20) {
-	std::cout << "ClapTrap default constructor called with " << this->_name << std::endl;
+	std::cout << "ClapTrap constructor called with " << this->_name << std::endl;
 }
 
 ClapTrap::ClapTrap() : _name("Default"), _hitPoints(100), _energyPoints(50), _attackDamage(20) {
