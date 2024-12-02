@@ -16,24 +16,14 @@ int	main()
 {
 	ClapTrap Joao("Joao");
 	ClapTrap Pedro("Pedro");
-	ClapTrap Miguel;
-	Miguel = Pedro;
 
-	Joao.attack("Pedro");
-	Pedro.takeDamage(0);
-	Pedro.takeDamage(1);
-	Pedro.attack("Miguel");
-	Pedro.attack("Miguel");
-	Pedro.attack("Miguel");
-	Pedro.attack("Miguel");
-	Pedro.attack("Miguel");
-	Pedro.attack("Miguel");
-	Pedro.attack("Miguel");
-	Pedro.attack("Miguel");
-	Pedro.attack("Miguel");
-	Pedro.attack("Miguel");
-	Pedro.beRepaired(2);
-	Pedro.takeDamage(10);
-	Miguel.attack("Joao");
+	for (int count = 0; count < 9; count++) {
+		Joao.attack("Miguel");
+	}
+	Pedro.takeDamage(3);
+	Pedro.beRepaired(1);
+	Pedro.takeDamage(2);
+	Joao.checkStatus();
+	Pedro.checkStatus();
 	return (0);
 }

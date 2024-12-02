@@ -77,11 +77,10 @@ void ClapTrap::beRepaired(unsigned int amount) {
 	}
 }
 
-void	ClapTrap::checkStatus(void)
-{
+void	ClapTrap::checkStatus() {
 	std::cout << this->_name << " status:" << std::endl;
 	std::cout << "Hit Point(s): " << this->_hitPoints << std::endl;
 	std::cout << "Energy Point(s): " << this->_energyPoints << std::endl;
-	std::cout << "Attack Damage :" << this->_attackDamage << std::endl;
+	std::cout << "Attack Damage : " << this->_attackDamage << std::endl;
 	return ;
 }
