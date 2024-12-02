@@ -6,26 +6,26 @@
 /*   By: ngtina1999 <ngtina1999@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 20:01:04 by thuy-ngu          #+#    #+#             */
-/*   Updated: 2024/12/02 06:29:01 by ngtina1999       ###   ########.fr       */
+/*   Updated: 2024/12/02 16:49:33 by ngtina1999       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "DiamondTrap.hpp"
 
 DiamondTrap::DiamondTrap(std::string const &name): ClapTrap(name + "_clap_name") {
-	std::cout << "DiamondTrap constructor called with " << this->_name << std::endl;
 	this->_name = name;
 	this->_hitPoints = FragTrap::_hitPoints;
 	this->_energyPoints = ScavTrap::_energyPoints;
 	this->_attackDamage = FragTrap::_attackDamage;
+	std::cout << "DiamondTrap constructor called with " << this->_name << std::endl;
 }
 
 DiamondTrap::DiamondTrap() :ClapTrap("default_clap_trap"){
-	std::cout << "DiamondTrap default constructor called with " << this->_name << std::endl;
 	this->_name = "Default_diamond_trip";
 	this->_hitPoints = FragTrap::_hitPoints;
 	this->_energyPoints = ScavTrap::_energyPoints;
 	this->_attackDamage = FragTrap::_attackDamage;
+	std::cout << "DiamondTrap default constructor called with " << this->_name << std::endl;
 }
 
 DiamondTrap::~DiamondTrap() {
@@ -39,7 +39,7 @@ DiamondTrap::DiamondTrap(DiamondTrap const &src) : ClapTrap(src), ScavTrap(src),
 DiamondTrap &DiamondTrap::operator=(const DiamondTrap &rhs) {
 	std::cout << "DiamondTrap copy assignment operator called with " << this->_name << std::endl;
 	if (this != &rhs) {
-		this->_name = rhs._name + "_clap_trap";
+		this->_name = rhs._name;
 		this->_hitPoints = rhs._hitPoints;
 		this->_energyPoints = rhs._energyPoints;
 		this->_attackDamage = rhs._attackDamage;
