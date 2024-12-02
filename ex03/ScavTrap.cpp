@@ -12,8 +12,6 @@
 
 #include "ScavTrap.hpp"
 
-#include "ScavTrap.hpp"
-
 ScavTrap::ScavTrap(std::string const &name): ClapTrap(name) {
 	std::cout << "ScavTrap constructor called with " << this->_name << std::endl;
 	this->_hitPoints = 100;

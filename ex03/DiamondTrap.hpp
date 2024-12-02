@@ -12,16 +12,12 @@ class DiamondTrap :  public ScavTrap, public FragTrap {
 		DiamondTrap(DiamondTrap const &src);
 		DiamondTrap &operator=(DiamondTrap const &rhs);
 
-Name, which is passed as parameter to a constructor
-• ClapTrap::name (parameter of the constructor + "_clap_name" suffix)
-• Hit points (FragTrap)
-• Energy points (ScavTrap)
-• Attack damage (FragTrap)
-• attack() (Scavtrap)
-9
-C++ - Module 03 Inheritance
-In addition to the special functions of both its parent classes, DiamondTrap will have
-its own special capacity:
-void whoAmI();};
+		void attack(const std::string &target);		
+		void whoAmI();
+
+	private:
+		str::string _name;
+
+};
 
 #endif
